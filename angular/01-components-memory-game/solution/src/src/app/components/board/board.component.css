@@ -1,24 +1,19 @@
 :host {
-    display: grid;
-    position: relative;
+    border: 8px solid rgb(12, 12, 136);
+    border-radius: 20px;
     align-self: center;
     justify-self: center;
-    border: 8px solid rgb(48, 42, 165);
-    border-radius: 20px;
-    background-color: rgb(174, 174, 196);
+    background-color: rgb(202, 202, 224);
     box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.5), 
                 inset 4px 4px 4px rgba(0, 0, 0, 0.5);
     padding: 8px;
-}
 
-.cells {
     display: grid;
     grid-template-columns: repeat(7, auto);
     grid-template-rows: repeat(6, auto);
 }
 
-.cell {
-    display: grid;
-    margin: 4px;  
+app-card {
+    margin: 4px;
 }
 

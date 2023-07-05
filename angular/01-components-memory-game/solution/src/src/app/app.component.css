@@ -1,0 +1,17 @@
+:host {
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+}
+
+.completed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.completed button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 2rem;
+}

@@ -3,18 +3,14 @@
     grid-template-columns: 240px 1fr 240px;
 }
 
-.area {
-    display: grid;
-}
-
-.area.completed {
+.completed {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.area.completed button {
+.completed button {
     padding: 10px;
     margin: 10px;
     font-size: 2rem;

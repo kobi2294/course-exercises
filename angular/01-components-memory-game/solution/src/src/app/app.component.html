@@ -1,9 +1,0 @@
-<app-player [player]="player1" [isActive]="currentPlayer === player1"/>
-<app-board 
-    *ngIf="!isCompleted"
-    [cells]="cells" (miss)="onMiss()" (match)="onMatch($event)"/>
-<div class="completed" *ngIf="isCompleted">
-    <h1>Game Over</h1>
-    <button (click)="newGame()">New Game</button>
-</div>
-<app-player [player]="player2" [isActive]="currentPlayer === player2"/>

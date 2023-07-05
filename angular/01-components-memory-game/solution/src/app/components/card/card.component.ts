@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component, Input, EventEmitter, Output, OnChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardCell } from 'src/app/models/card-cell.model';
 
@@ -22,12 +22,13 @@ export class CardComponent implements OnChanges {
   imagePath = '';
   backPath = 'assets/images/bg.jpg';
 
-  calcPath(): string {
+  calcPath() {
     if (this.card === null) return '';
     return `assets/images/cards/${this.card.image}.jpg`;
+
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.imagePath = this.calcPath();
   }
 

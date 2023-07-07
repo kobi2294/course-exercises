@@ -1,0 +1,39 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px -4px rgba(0, 0, 0, 0.24);
+    background-color: rgb(240, 240, 240);
+}
+
+h1 {
+    color: rgb(26, 83, 117);
+    font-size: 3em;
+    margin: 10px;
+    text-align: center;
+}
+
+.result {
+    background-color: rgba(178, 213, 239, 0.15);
+    margin: 2px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.3em;
+    color: rgb(32, 99, 167);
+}
+
+.result>div {
+    text-align: center;
+    border-left: 2px solid rgba(40, 71, 137, 0.5);
+}
+
+.result>div:first-child {
+    border-left: 0px solid transparent;
+}
+
+.result:nth-child(2n) {
+    background-color: rgba(178, 213, 239, 0.4);
+}

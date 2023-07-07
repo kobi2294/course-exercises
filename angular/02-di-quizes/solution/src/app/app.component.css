@@ -1,0 +1,12 @@
+:host {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.side-area {
+    display: grid;
+}
+
+.main-area {
+    display: grid;
+}

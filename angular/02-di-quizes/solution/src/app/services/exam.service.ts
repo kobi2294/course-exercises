@@ -5,9 +5,7 @@ import { generateAdvacnedQuestion, generateBeginnerQuestion, generateIntermediat
 import { Level } from '../models/level.model';
 import { calculateCorrectCount } from '../helpers/scores';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ExamService {
   private _questions: Question[] = this.generateQuestions();
   private _answers: number[] = [];

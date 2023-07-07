@@ -7,7 +7,9 @@ Practice angular components:
 - Various bindings to templates
 - `@Input`, 
 - `@Output` 
-- Lifecycle hooks, by writing a memory game
+- Lifecycle hooks,
+
+by writing a memory game
 
 [Exercise Document](./angular/01-components-memory-game/) | 
 [Soltion code](./angular/01-components-memory-game/solution/) | 
@@ -19,6 +21,8 @@ Practice "Dependency Injection"
 - Component Injectors
 - Various types of providers
 - Injection Tokens
+
+by writing a quizes app
 
 [Exercise Document](./angular/02-di-quizes/) |
 [Soltion Code](./angular/02-di-quizes/solution/) |

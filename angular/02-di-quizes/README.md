@@ -48,7 +48,7 @@ In this exercise we will build a math quiz application that allows children to p
     - `scoresAverage: number` - The average of the past results.
     - `level: PlayerLevel` - The current level of the player according to his past scores
     - expose a method called `startExam` which changes the `isTakingExam` property to true
-    - expose a method called `completeExam(correct, wrong)` which adds a new `QuizResult`, and changes the `isTakingExam` flag to false. Don't forget to update the average score and level.
+    - expose a method called `completeExam(level, correct, wrong)` which adds a new `QuizResult`, and changes the `isTakingExam` flag to false. Don't forget to update the average score and level.
     - The `PlayerService` should be provided in root as there is only one single player state in the entire app.
 5. Create a `ExamService` that maintains the state of an on going exam. This service will be instantiated every time an exam starts, and destroyed when the exam completes
     - When created, the service should generate a sequence of random questions according to the level of the player

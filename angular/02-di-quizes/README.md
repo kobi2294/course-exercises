@@ -17,17 +17,31 @@ In this exercise we will build a math quiz application that allows children to p
 
 ## Requirements
 1. Define the data model. 
-    - You should have a `Question` entity that holds a question, and the correct ansewr. 
-    - A `Level` union type: `Beginner | Intermidate | Advanced` for both players and quizes
-    - A `QuizResult` entity that holds the date and time of the quiz, the level of the quiz, the number of correct answers, the number of total questions and the effective score between 1 and 100
+```typescript
+    export interface Question {
+        caption: string;
+        answer: number;
+    }
+
+    export type Level = 'Beginner' | 'Intermediate' | 'Advanced';
+
+    export interface QuizResult {
+        date: Date;
+        level: Level;
+        correctAnswers: number;
+        totalQuestions: number;
+        score: number // 1 .. 100
+    }
+```
+
 2. Create 3 different random question generators as standalone helper functions:
     - `generateBeginnerQuestion` - a random `X + Y` question where X and Y are between 1 and 10
-    - `generateIntermidateQuestion` - a random `X * Y` question where X and Y are between 5 and 10
+    - `generateIntermediateQuestion` - a random `X * Y` question where X and Y are between 5 and 10
     - `generateAdvancedQuestion` - a random `X * Y` question where X and Y are between 8 and 15
 3. Create another helper function, a pure function that calculates a player level according to a list of quiz results, according to the following rules: 
     - By default the level is `Beginner`.
-    - If the list contains at least 3 full quizes, and the avarage score is above 60, he becomes `Intermidate`
-    - If the list contains at least 3 full `intermidate` quizes, and the avarage score is above 80, the level is `Advanced`
+    - If the list contains at least 3 full quizes, and the avarage score is above 60, he becomes `Intermediate`
+    - If the list contains at least 3 full `Intermediate` quizes, and the avarage score is above 80, the level is `Advanced`
 4. Create a `PlayerService` that maintains and allows to modify the state of the player
     - `pastResults: QuizResult[]` - The list of past results of the player
     - `isTakingExam: boolean` - Is the player currently taking an exam. when true, the application will show an exam in the main area. When not true, the application will show a report of the quiz results
@@ -49,7 +63,6 @@ In this exercise we will build a math quiz application that allows children to p
     - Feel free to add more components
 
 ## Challanges
-
 1. Where would you provide the `PlayerService`?
 2. Where would you provide the `ExamService`?
 3. So far, the `ExamService` has decided how many questions to generate per each exam, your boss now adds a new requirement that the number of questions can be configured outside and that the exam service will get this configuration in the constructor. How and where would you provide it?

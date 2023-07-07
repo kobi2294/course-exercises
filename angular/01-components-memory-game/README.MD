@@ -20,9 +20,23 @@ In this exercise we will create a simple memory game. The game will have two pla
 0. Before you start coding, download some images and store them in the `assets` folder. 
     - Add another image for the back face of the card. This is the image that will be displayed when the card is flipped
 1. Define these types:
-    - `Player`: should have properties for `name`, and an array of `collectedPairs`. You can initialize the names to `Player 1` and `Player 2`
-    - `Card`: should have properties for `id` and `image`
+    - `Player`
+    - `Card`
     - `CardCell`: `Card | null`, this type describes the content of each cell in the board grid.
+
+   ```typescript
+    export interface Card {
+        id: string;
+        image: string;
+    }
+
+   export interface Player {
+        name: string;
+        collectedPairs: Card[]
+    }
+
+    export type CardCell = Card | null;
+   ```
 2. Create four Angular components:
     - `CardComponent`: displays a card. (Presentational)
         - This component should take a `CardCell` as input

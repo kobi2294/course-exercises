@@ -20,4 +20,4 @@ Practice "Dependency Injection"
 - Injection Tokens
 
 [Soltion code](./angular/02-di-quizes/solution/)
-[Solution Video]()
+[Solution Video](https://youtu.be/hGGzuQYO7_E)

@@ -4,7 +4,10 @@
 
 ### 1. [Memory Game](./angular/01-components-memory-game/)
 Practice angular components: 
-- `@Input`, `@Output` and the lifecycle hooks, by writing a memory game
+- Various bindings to templates
+- `@Input`, 
+- `@Output` 
+- Lifecycle hooks, by writing a memory game
 
 [Soltion code](./angular/01-components-memory-game/solution/)
 [Solution Video](https://youtu.be/STvDVdZ1XOw)

@@ -1,0 +1,41 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: rgb(59, 50, 143);
+    font-size: 4em;
+}
+
+input {
+    border: 1px solid rgb(73, 135, 186);
+    color: rgb(73, 135, 186);
+    font-size: 4em;
+    width: 2em;
+    text-align: center;
+    outline: 0px transparent;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button {
+    margin: 20px;
+}

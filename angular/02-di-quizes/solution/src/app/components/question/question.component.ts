@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ExamService } from 'src/app/services/exam.service';
 
 @Component({
   selector: 'app-question',
@@ -9,5 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent {
+  constructor(protected examService: ExamService){}
 
 }

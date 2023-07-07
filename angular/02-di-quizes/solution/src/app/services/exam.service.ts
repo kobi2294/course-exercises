@@ -7,9 +7,9 @@ import { calculateCorrectCount } from '../helpers/scores';
 
 @Injectable()
 export class ExamService {
-  private _questions: Question[] = this.generateQuestions();
   private _answers: number[] = [];
   private _level: Level = this.playerService.level;
+  private _questions: Question[] = this.generateQuestions();
 
   get currentQuestion() { return this._questions[this._answers.length]};
   get questionsCount() { return this._questions.length}

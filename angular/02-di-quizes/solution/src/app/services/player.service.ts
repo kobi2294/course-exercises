@@ -38,7 +38,7 @@ export class PlayerService {
       date: new Date(), 
       correctAnswers: correct, 
       totalQuestions: correct + wrong, 
-      score: Math.round(correct / (correct + wrong)), 
+      score: Math.round(100 * correct / (correct + wrong)), 
       level: level      
     }
 

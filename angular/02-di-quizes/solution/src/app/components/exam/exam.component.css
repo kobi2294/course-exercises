@@ -1,0 +1,8 @@
+:host {
+    font-size: 2em;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px -4px rgba(0, 0, 0, 0.24);
+    background-color: rgb(214, 229, 239);
+}

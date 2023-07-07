@@ -1,6 +1,7 @@
 :host {
     display: grid;
     grid-template-columns: 200px 1fr;
+    background-color: rgb(255, 255, 255);
 }
 
 .side-area {
@@ -10,3 +11,4 @@
 .main-area {
     display: grid;
 }
+

@@ -1,1 +1,9 @@
-<p>exam works!</p>
+<div class="top-area">
+    <div class="info-box">
+        <strong>Exam Progress</strong>
+        {{examService.currentQuestionIndex}} / {{examService.questionsCount}}
+    </div>
+</div>
+<div class="main-area">
+    <app-question/>
+</div>

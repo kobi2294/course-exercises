@@ -31,7 +31,7 @@ h1 {
 }
 
 .result>div:first-child {
-    border-left: 0px solid transparent;
+    border-left: 0px transparent;
 }
 
 .result:nth-child(2n) {

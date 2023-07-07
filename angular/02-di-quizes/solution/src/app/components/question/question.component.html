@@ -1,3 +1,11 @@
 <h1>{{examService.currentQuestion.caption}}</h1>
-<input type="number" #answerBox>
-<button (click)="examService.answerCurrentQuestion(answerBox.valueAsNumber); answerBox.value=''; answerBox.focus()">Submit</button>
+<input type="number" #answerBox/>
+<button
+    (click)="
+        examService.answerCurrentQuestion(answerBox.valueAsNumber);
+        answerBox.value = '';
+        answerBox.focus()
+    "
+>
+    Submit
+</button>

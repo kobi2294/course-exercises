@@ -11,5 +11,4 @@ import { ExamService } from 'src/app/services/exam.service';
 })
 export class QuestionComponent {
   constructor(protected examService: ExamService){}
-
 }

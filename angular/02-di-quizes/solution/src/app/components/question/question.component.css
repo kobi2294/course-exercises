@@ -3,6 +3,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    justify-self: center;
+    align-self: center;
+}
+
+:host>* {
+    margin: 20px;
 }
 
 h1 {

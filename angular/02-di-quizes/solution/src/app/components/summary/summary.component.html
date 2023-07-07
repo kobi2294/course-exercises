@@ -1,6 +1,7 @@
 <h1>Summary</h1>
+
 <div class="result" *ngFor="let result of playerService.pastResults">
-    <div class="date">{{result.date | date:'short'  }} </div>
-    <div class="level">{{result.level}} </div>
-    <div class="score">{{result.score | number : '1.2-2'}}</div>
+    <div>{{result.date | date: 'short'}}</div>
+    <div>{{result.level}}</div>
+    <div>{{result.score | number : '1.2-2'}}</div>
 </div>

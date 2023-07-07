@@ -5,4 +5,11 @@
     border-radius: 10px;
     box-shadow: 8px 8px 8px -4px rgba(0, 0, 0, 0.24);
     background-color: rgb(214, 229, 239);
+
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.main-area {
+    display: grid;
 }

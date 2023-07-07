@@ -1,7 +1,16 @@
-<div class="info-box"><strong>Level</strong> {{ playerService.level }}</div>
-<div class="info-box"><strong>Exams</strong> {{ playerService.pastResults.length }}</div>
-<div class="info-box"><strong>Average</strong> {{ playerService.scoresAverage | number : '1.2-2'}}</div>
+<div class="info-box">
+  <strong>Level</strong>
+  {{ playerService.level }}
+</div>
+<div class="info-box">
+  <strong>Exams</strong>
+  {{ playerService.pastResults.length }}
+</div>
+<div class="info-box">
+  <strong>Average</strong>
+  {{ playerService.scoreAverage | number : "1.2-2" }}
+</div>
 
-<button *ngIf="!playerService.isTakingExam"
-    (click)="startExam()"
->Start New Quiz</button>
+<button 
+    *ngIf="!playerService.isTakingExam"
+(click)="playerService.startExam()">Start New Quiz</button>

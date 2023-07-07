@@ -1,33 +1,25 @@
 import { Injectable } from '@angular/core';
 import { QuizResult } from '../models/quiz-result.model';
-import { calculateLevel, getAverageScore } from '../helpers/scores';
 import { Level } from '../models/level.model';
+import { calcAverageScore, calcLevel } from '../helpers/scores';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class PlayerService {
-  constructor() {}
+  constructor() { }
 
   private _pastResults: QuizResult[] = [];
-  get pastResults() {
-    return this._pastResults;
-  }
+  get pastResults() { return this._pastResults}
 
   private _isTakingExam: boolean = false;
-  get isTakingExam() {
-    return this._isTakingExam;
-  }
+  get isTakingExam() { return this._isTakingExam}
 
-  private _scoresAverage: number = 0;
-  get scoresAverage() {
-    return this._scoresAverage;
-  }
+  private _scoreAverage: number = 0;
+  get scoreAverage() { return this._scoreAverage}
 
   private _level: Level = 'Beginner';
-  get level() {
-    return this._level;
-  }
+  get level() {return this._level}
 
   startExam() {
     this._isTakingExam = true;
@@ -39,12 +31,12 @@ export class PlayerService {
       correctAnswers: correct, 
       totalQuestions: correct + wrong, 
       score: Math.round(100 * correct / (correct + wrong)), 
-      level: level      
+      level: level
     }
 
     this._pastResults.push(res);
-    this._scoresAverage = getAverageScore(this._pastResults);
-    this._level = calculateLevel(this._pastResults);
+    this._scoreAverage = calcAverageScore(this._pastResults);
+    this._level = calcLevel(this._pastResults);
     this._isTakingExam = false;
   }
 }

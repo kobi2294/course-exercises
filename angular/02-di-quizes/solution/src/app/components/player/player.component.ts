@@ -12,8 +12,4 @@ import { PlayerService } from 'src/app/services/player.service';
 export class PlayerComponent {
   constructor(protected playerService: PlayerService){}
 
-  startExam() {
-    this.playerService.startExam();
-  }
-
 }

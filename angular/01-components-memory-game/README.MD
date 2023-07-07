@@ -1,5 +1,9 @@
 # Angular Components - Memory Game
 
+## Prerequisites
+To complete this exercise students should know
+- Angular basic component authoring (binding, inputs, outputs, lifecycle hooks)
+
 ## Goal
 Practice Angular components authoring. 
 * Component Creation

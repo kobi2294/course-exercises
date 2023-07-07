@@ -1,5 +1,11 @@
 # Angular Services and Dependency Injection - Quizes App
 
+## Prerequisites
+To complete this exercise students should know
+- Angular basic component authoring (binding, inputs, outputs, lifecycle hooks)
+- Dependency Injection in Angular (root injector, component injector, provider types, injection token)
+
+
 ## Goal
 Practice Angulars Dependency Injection system
 * Singletons at root injector
@@ -37,9 +43,9 @@ In this exercise we will build a math quiz application that allows children to p
     - The service will expose a method `answerCurrentQuestion(value)` that gets the user answer and modifies the state
     - When the quiz is completed, the service will call the `PlayerService.completeExam` method and pass the results
 6. Build the proper components: You should have at least:
-    - `PlayerComponent`
-    - `ExamComponent`
-    - `QuestionComponent`
+    - `PlayerComponent` - Smart component that displays the player info
+    - `ExamComponent` - Smart component that runs the exam and presents the current status
+    - `QuestionComponent` - Smart component that presents the "current questions" and allows to answer it
     - Feel free to add more components
 
 ## Challanges
@@ -48,5 +54,9 @@ In this exercise we will build a math quiz application that allows children to p
 2. Where would you provide the `ExamService`?
 3. So far, the `ExamService` has decided how many questions to generate per each exam, your boss now adds a new requirement that the number of questions can be configured outside and that the exam service will get this configuration in the constructor. How and where would you provide it?
 4. Now your boss comes out with a new requirement. The exam service should not decide which question generator to use, the generator function should also be provided in the constructor. How and where would you provide it?
+
+## Remarks and Hints
+- In this exercise you are allowed to bind directly to service properties. In reality this is a very bad practice (in the future we will use `RxJS` to avoid it) but we will allow it here in order to make this exercise simple and focused on DI and components only.
+- You are also allowed to bind to property getter functions. Binding to functions is usually very bad practice. Try to minimize it to only binding to property getters - not member methods. 
 
 

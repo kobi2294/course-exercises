@@ -1,4 +1,5 @@
 import { Level } from "../models/level.model";
+import { Question } from "../models/question.model";
 import { QuizResult } from "../models/quiz-result.model";
 
 export function calculateLevel(results: QuizResult[]): Level {
@@ -14,4 +15,16 @@ export function getAverageScore(results: QuizResult[]): number {
     if (results.length === 0) return 0;
     const sum = results.reduce((acc, item) => acc + item.score, 0);
     return sum / results.length
+}
+
+export function calculateCorrectCount(questions: Question[], answers: number[]): number {
+    let res = 0;
+
+    for (let index = 0; index < questions.length; index++) {
+        const question = questions[index];
+        const answer = answers[index];
+        if (question.answer === answer) res++;        
+    }
+
+    return res;
 }

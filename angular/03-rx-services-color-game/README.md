@@ -41,7 +41,15 @@ In this exercise we will build a game where the user has to guess the RGB compon
 ## Challanges
 1. Since hitting the color **Exactly** is quite difficult, change the implementation so that the 2 guess is considered correct if the distance between the colors is less then 10.
     - The distance between 2 colors is calculated by the following formula: `sqrt(dR^2 + dG^2 + dB^2)` when dR is the difference in red components, dG is the difference in green components, and dB is the difference in blue components
-2. For better game experience, try to present the current "distance" graphically. Do not present it as the exact number, try to normalize it to a number between 0 - 100 where 100 is any distance larger than `110.0` and 0 is any distance smaller than `10.0`
+2. For better game experience, try to present the current "distance". Do not present it as the exact number, try to normalize it to a number between 0 - 100 where 100 is any distance larger than `110.0` and 0 is any distance smaller than `10.0`.
+3. To improve it even more, you can use Css to present the distance as a progress bar. Create the following html structure:
+``` html
+<div class="track">
+    <div class=thumb"></div>
+</div>
+```
+And set the width of the thumb to a percentage according to the distance. You can use the `map` operator to convert the distance observable to percentage;
+
 
 ## Remarks and Hints
 * `FormGroup` has a property called `valueChanges` which is an observable that yields value of the entire form, when it changes.

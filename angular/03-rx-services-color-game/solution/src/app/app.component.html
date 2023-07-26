@@ -13,4 +13,8 @@
     <input type="range" min="0" max="255" formControlName="b">
 </div>
 
-<button *ngIf="isCorrect$ | async">Start Again</button>
+<div class="distanceTrack">
+    <div class="distanceThumb" [style.width]="distance$ | async"></div>
+</div>
+
+<button *ngIf="isCorrect$ | async" (click)="restart()">Start Again</button>

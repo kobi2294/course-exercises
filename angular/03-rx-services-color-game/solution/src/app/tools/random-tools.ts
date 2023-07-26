@@ -32,14 +32,26 @@ export function isSameColor(clr1: string, clr2: string): boolean {
     const rgb2 = stringToRgb(clr2);    
     const dist = distance(rgb1, rgb2);
 
-    return dist < 10;
+    return dist === 0;
 
 }
 
-export function distance(clr1: [number, number, number], clr2: [number, number, number]): number {
-  const diffs = clr1.map((_, index) => clr1[index] - clr2[index]);
+export function distance(clr1: [number, number, number] | string, clr2: [number, number, number] | string): number {
+  const rgb1 = (typeof clr1 === 'string') ? stringToRgb(clr1) : clr1;
+  const rgb2 = (typeof clr2 === 'string') ? stringToRgb(clr2) : clr2;
+
+  const diffs = rgb1.map((_, index) => rgb1[index] - rgb2[index]);
   const squares = diffs.map(x => x * x);
   const sum = squares.reduce((acc, i) => acc + i, 0);
   const distance = Math.sqrt(sum);
-  return distance;
+  const normalized = normalizeDistance(distance);
+  return normalized;
+}
+
+function normalizeDistance(distance: number): number {
+
+  if (distance > 110) return 100;
+  if (distance < 10) return 0;
+
+  return Math.round(distance - 10);
 }

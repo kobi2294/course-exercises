@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ColorsService } from './services/colors.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { rgbString, stringToRgb } from './tools/random-tools';
+import { map, tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,10 @@ export class AppComponent implements OnInit {
   generatedColor$ = this.colorsService.generatedColor$;
   guessColor$ = this.colorsService.guessedColor$;
   isCorrect$ = this.colorsService.guessCorrect$;
+  distance$ = this.colorsService.distance$.pipe(
+    map(val => `${val}%`), 
+    tap(console.log)
+  )
 
   form = new FormGroup({
     r: new FormControl(0),
@@ -31,7 +36,7 @@ export class AppComponent implements OnInit {
   }
 
   restart() {
-    this.form.reset();
+    this.form.reset({r: 0, g: 0, b: 0});
     this.colorsService.generateColor();
   }
 }

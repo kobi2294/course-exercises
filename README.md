@@ -21,3 +21,10 @@ Practice "Dependency Injection"
 
 [Soltion code](./angular/02-di-quizes/solution/)
 [Solution Video]()
+
+### 3. [Color Game](./angular/03-rx-services-color-game/)
+Practice writing reactive services
+- Using the `async` pipe
+- Using `BehaviorSubject`s
+- Using reactive forms - reactively
+

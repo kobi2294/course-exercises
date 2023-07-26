@@ -10,7 +10,7 @@ export class ColorsService {
   private _generatedColor$ = new BehaviorSubject<string>('');
   private _guessedColor$ = new BehaviorSubject<string>('');
   private _guessCorrect$ = new BehaviorSubject<boolean>(false);
-  private _distance$ = new BehaviorSubject<number>(10);
+  private _distance$ = new BehaviorSubject<number>(100);
 
   readonly generatedColor$ = this._generatedColor$.asObservable();
   readonly guessedColor$ = this._guessedColor$.asObservable();

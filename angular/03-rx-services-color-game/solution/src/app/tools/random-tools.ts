@@ -1,6 +1,6 @@
 export function randomNumber(min: number, max: number): number {
   const range = max - min;
-  return Math.floor(Math.random() * range);
+  return Math.floor(Math.random() * range + min);
 }
 
 export function randomColor(): string {

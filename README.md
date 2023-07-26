@@ -38,5 +38,5 @@ by writing a color game
 
 [Exercise Document](./angular/03-rx-services-color-game/) |
 [Soltion Code](./angular/03-rx-services-color-game/solution/) |
-[Solution Video](https://youtu.be/hGGzuQYO7_E) 
+[Solution Video](https://youtu.be/krTZrXUKGjA) 
 

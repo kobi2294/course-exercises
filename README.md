@@ -28,7 +28,7 @@ by writing a quizes app
 [Soltion Code](./angular/02-di-quizes/solution/) |
 [Solution Video](https://youtu.be/hGGzuQYO7_E) 
 
-### 3. [Color Game](./angular/03-rx-services-color-game/)
+### 3. Color Game
 Practice writing reactive services
 - Using the `async` pipe
 - Using `BehaviorSubject`s

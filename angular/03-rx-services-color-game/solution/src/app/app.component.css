@@ -34,17 +34,16 @@ label {
     margin: 4px;
 }
 
-.distanceTrack {
+.track {
     display: grid;
     height: 20px;
     border: 1px solid gray;
     grid-column: 1 / 3;
 }
 
-.distanceThumb {
+.thumb {
     display: flex;
     background-color: gray;
-    grid-column-start: 1;
 }
 
 button {

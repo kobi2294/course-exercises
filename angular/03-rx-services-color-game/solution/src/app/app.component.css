@@ -1,0 +1,35 @@
+:host {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto auto auto;
+    justify-content: start;
+}
+
+h1 {
+    grid-column: 1 / -1;
+}
+
+.color {
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 4px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+input {
+    width: 512px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+}

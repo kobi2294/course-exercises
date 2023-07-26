@@ -40,7 +40,7 @@ In this exercise we will build a game where the user has to guess the RGB compon
 
 ## Challanges
 1. Since hitting the color **Exactly** is quite difficult, change the implementation so that the 2 guess is considered correct if the distance between the colors is less then 10.
-    - The distance between 2 colors is calculated by the following formula: sqrt(dR^2 + dG^2 + dB^2) when dR is the difference in red components, dG is the difference in green components, and dB is the difference in blue components
+    - The distance between 2 colors is calculated by the following formula: `sqrt(dR^2 + dG^2 + dB^2)` when dR is the difference in red components, dG is the difference in green components, and dB is the difference in blue components
 
 ## Remarks and Hints
 * `FormGroup` has a property called `valueChanges` which is an observable that yields value of the entire form, when it changes.
